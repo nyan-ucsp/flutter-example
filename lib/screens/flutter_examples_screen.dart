@@ -1,3 +1,4 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_example/services/navigation_service.dart';
 
@@ -27,6 +28,39 @@ class _FlutterExamplesScreenState extends State<FlutterExamplesScreen> {
                       RouteName.chooseLanguageExampleScreen);
                 },
                 child: Text('Choose Language'),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              OutlineButton(
+                onPressed: () {
+                  NavigationService.navigateTo(
+                      RouteName.changeDarkThemeExampleScreen);
+                },
+                child: Text('Dark Mode'),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              OutlineButton(
+                onPressed: () {
+                  BotToast.showText(
+                    text: " 🟢  Success",
+                    onlyOne: true,
+                    duration: Duration(seconds: 1),
+                  );
+                },
+                child: Text('Bot Toast'),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              OutlineButton(
+                onPressed: () {
+                  NavigationService.navigateTo(
+                      RouteName.moorDatabaseExampleScreen);
+                },
+                child: Text('Moor Database Example'),
               ),
             ],
           ),

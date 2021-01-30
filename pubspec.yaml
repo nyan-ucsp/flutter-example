@@ -25,13 +25,20 @@ dependencies:
     sdk: flutter
   provider: any
   get_it: any
-  shared_preferences: any
-  flutter_secure_storage: any
+  # language
   easy_localization: any
+  # database
   moor: any
   sqlite3_flutter_libs: any
   path_provider: any
   path: any
+  # storage services
+  shared_preferences: any
+  flutter_secure_storage: any
+  # svg
+  flutter_svg: any
+  # pop up
+  bot_toast: ^3.0.5
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -40,9 +47,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  # database
   moor_generator: any
   build_runner: any
-  flutter_svg: any
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

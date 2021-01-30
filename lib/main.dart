@@ -1,6 +1,7 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_example/screens/splash_screen_example.dart';
+import 'package:flutter_example/database/database.dart';
 import 'package:flutter_example/services/navigation_service.dart';
 import 'package:flutter_example/services/theme_service.dart';
 import 'package:provider/provider.dart';
@@ -12,9 +13,10 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        // Provider<DataBoxDatabase>(
-        //   create: (_) => DataBoxDatabase(),
-        // ),
+        Provider<Database>(
+          create: (_) => Database(),
+          dispose: (context, db) => db.close(),
+        ),
         ChangeNotifierProvider(
           create: (_) => ThemeService(),
         )
@@ -43,7 +45,9 @@ class MyApp extends StatelessWidget {
       builder: (context, snapshot) {
         return MaterialApp(
           title: 'Data Box',
+          builder: BotToastInit(),
           navigatorKey: NavigationService.navigationKey,
+          navigatorObservers: [BotToastNavigatorObserver()],
           theme:
               snapshot.data ? ThemeService.darkTheme : ThemeService.lightTheme,
           locale: context.locale,

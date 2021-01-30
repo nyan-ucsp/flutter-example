@@ -1,4 +1,4 @@
-import 'package:flutter_example/services/theme_service.dart';
+import 'package:flutter_example/database/database.dart';
 import 'package:get_it/get_it.dart';
 
 import 'navigation_service.dart';

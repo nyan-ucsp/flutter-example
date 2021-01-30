@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_example/screens/change_dark_theme_example_screen.dart';
 import 'package:flutter_example/screens/choose_language_example_screen.dart';
+import 'package:flutter_example/screens/database_example_screen.dart';
 import 'package:flutter_example/screens/flutter_examples_screen.dart';
 import 'package:flutter_example/screens/splash_screen_example.dart';
 
@@ -8,6 +10,10 @@ class RouteName {
   static const String flutterExamplesScreen = '/flutter_examples_screen';
   static const String chooseLanguageExampleScreen =
       '/choose_language_example_screen';
+  static const String changeDarkThemeExampleScreen =
+      '/change_dark_theme_example_screen';
+  static const String moorDatabaseExampleScreen =
+      '/moor_database_example_screen';
 }
 
 class NavigationService {
@@ -36,6 +42,18 @@ class NavigationService {
         // final ChooseLanguageExampleScreen args = settings.arguments;
         return MaterialPageRoute(
           builder: (_) => ChooseLanguageExampleScreen(),
+        );
+        break;
+      case RouteName.changeDarkThemeExampleScreen:
+        // final ChangeDarkThemeExampleScreen args = settings.arguments;
+        return MaterialPageRoute(
+          builder: (_) => ChangeDarkThemeExampleScreen(),
+        );
+        break;
+      case RouteName.moorDatabaseExampleScreen:
+        // final DatabaseExampleScreen args = settings.arguments;
+        return MaterialPageRoute(
+          builder: (_) => DatabaseExampleScreen(),
         );
         break;
       default:

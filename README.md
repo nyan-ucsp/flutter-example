@@ -14,9 +14,12 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+## Moor database generate
+generate all the code needed with **flutter packages pub run build_runner build**
+continuously rebuild the generated code where you change your code, run **flutter packages pub run build_runner watch**
 
 ## Configration on iOS
-- [Package: easy_localization]()
+- [Package: easy_localization]()(https://github.com/nyan-ucsp/flutter-example/blob/master/ios/Runner/Info.plist)
 in (ios/Runner/Info.plist)
 
 
